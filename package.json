@@ -47,6 +47,7 @@
   "dependencies": {
     "-": "0.0.1",
     "@babel/polyfill": "^7.12.1",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "normalize.css": "^8.0.1"
   }
 }
