@@ -98,6 +98,7 @@ class Dom {
 
   removeClass(className) {
     this.$el.classList.remove(className)
+    return this
   }
 }
 
