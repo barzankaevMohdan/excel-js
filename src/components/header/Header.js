@@ -1,4 +1,4 @@
-import { ExcelComponent } from '../../core/ExcelComponent'
+import {ExcelComponent} from '@core/ExcelComponent'
 
 export class Header extends ExcelComponent {
   static className = 'excel__header'
@@ -12,20 +12,16 @@ export class Header extends ExcelComponent {
 
   toHTML() {
     return `
-      <input class="excel__header-input" type="text" value="Новая таблица">
+      <input type="text" class="input" value="Новая таблица" />
 
       <div>
-      
+
         <div class="button">
-          <svg>
-            <use xlink:href="#delete"/>
-          </svg>
+          <i class="material-icons">delete</i>
         </div>
 
         <div class="button">
-          <svg>
-            <use xlink:href="#exit"/>
-          </svg>
+          <i class="material-icons">exit_to_app</i>
         </div>
 
       </div>

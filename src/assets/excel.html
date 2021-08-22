@@ -1,187 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Pure JavaScript Excel</title>
 </head>
 <body>
-  
-  <div class="container" id="app">
 
-    <div class="excel">
-      
-      <div class="excel__header">
+<div id="app" class="container">
 
-        <input class="excel__header-input" type="text" value="Новая таблица">
+  <div class="excel">
 
-        <div>
-          <div class="button">
-            <svg>
-              <use xlink:href="#delete"/>
-            </svg>
+    <div class="excel__header">
+
+      <input type="text" class="input" value="Новая таблица" />
+
+      <div>
+
+        <div class="button">
+          <i class="material-icons">delete</i>
+        </div>
+
+        <div class="button">
+          <i class="material-icons">exit_to_app</i>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="excel__toolbar">
+
+      <div class="button">
+        <i class="material-icons">format_align_left</i>
+      </div>
+
+      <div class="button">
+        <i class="material-icons">format_align_center</i>
+      </div>
+
+      <div class="button">
+        <i class="material-icons">format_align_right</i>
+      </div>
+
+      <div class="button">
+        <i class="material-icons">format_bold</i>
+      </div>
+
+      <div class="button">
+        <i class="material-icons">format_italic</i>
+      </div>
+
+      <div class="button">
+        <i class="material-icons">format_underlined</i>
+      </div>
+
+    </div>
+
+    <div class="excel__formula">
+      <div class="info">fx</div>
+      <div class="input" contenteditable spellcheck="false"></div>
+    </div>
+
+    <div class="excel__table">
+
+      <div class="row">
+
+        <div class="row-info"></div>
+
+        <div class="row-data">
+          <div class="column">
+            A
+          </div>
+          <div class="column">
+            B
+          </div>
+          <div class="column">
+            C
+          </div>
+          <div class="column">
+            A
+          </div>
+          <div class="column">
+            B
+          </div>
+          <div class="column">
+            C
+          </div>
+          <div class="column">
+            A
+          </div>
+          <div class="column">
+            B
+          </div>
+          <div class="column">
+            C
+          </div>
+          <div class="column">
+            A
+          </div>
+          <div class="column">
+            B
+          </div>
+          <div class="column">
+            C
+          </div>
+          <div class="column">
+            A
+          </div>
+          <div class="column">
+            B
+          </div>
+          <div class="column">
+            C
+          </div>
+          <div class="column">
+            A
+          </div>
+          <div class="column">
+            B
+          </div>
+          <div class="column">
+            C
+          </div>
+          <div class="column">
+            A
+          </div>
+          <div class="column">
+            B
+          </div>
+          <div class="column">
+            C
+          </div>
+          <div class="column">
+            A
+          </div>
+          <div class="column">
+            B
+          </div>
+          <div class="column">
+            C
+          </div>
+          <div class="column">
+            A
+          </div>
+          <div class="column">
+            B
+          </div>
+          <div class="column">
+            C
+          </div>
+          <div class="column">
+            A
+          </div>
+          <div class="column">
+            B
+          </div>
+          <div class="column">
+            C
           </div>
 
-          <div class="button">
-            <svg>
-              <use xlink:href="#exit"/>
-            </svg>
-          </div>
         </div>
 
-      </div> <!--excel__header-->
+      </div>
 
-      <div class="excel__toolbar">
-        
-        <div class="button">
-          <svg>
-            <use xlink:href="#text-left"/>
-          </svg>
+      <div class="row">
+        <div class="row-info">
+          1
         </div>
 
-        <div class="button">
-          <svg>
-            <use xlink:href="#text-center"/>
-          </svg>
+        <div class="row-data">
+          <div class="cell selected" contenteditable="">A1</div>
+          <div class="cell" contenteditable>B2</div>
+          <div class="cell" contenteditable="">C3</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-info">
+          2
         </div>
 
-        <div class="button">
-          <svg>
-            <use xlink:href="#text-right"/>
-          </svg>
+        <div class="row-data">
+          <div class="cell">A1</div>
+          <div class="cell">B2</div>
+          <div class="cell">C3</div>
         </div>
+      </div>
 
-        <div class="button">
-          <svg>
-            <use xlink:href="#text-bold"/>
-          </svg>
-        </div>
+    </div>
 
-        <div class="button">
-          <svg>
-            <use xlink:href="#text-italic"/>
-          </svg>
-        </div>
+  </div>
 
-        <div class="button">
-          <svg>
-            <use xlink:href="#text-underline"/>
-          </svg>
-        </div>
+</div>
 
-      </div> <!--excel__toolbar-->
-
-      <div class="excel__formula">
-        <div class="excel__formula-info">fx</div>
-        <div class="excel__formula-input" contenteditable spellcheck="false"></div>
-      </div> <!--excel__formula-->
-      
-      <div class="excel__table">
-
-        <div class="row">
-          <div class="row-info"></div>
-
-          <div class="row-data">
-
-            <div class="column">
-              A
-            </div>
-            <div class="column">
-              B
-            </div>
-            <div class="column">
-              C
-            </div>
-
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="row-info">
-            1
-          </div>
-
-          <div class="row-data">
-            <div class="cell selected" contenteditable>A1</div>
-            <div class="cell" contenteditable>B1</div>
-            <div class="cell" contenteditable>C1</div>
-          </div>
-        </div>
-
-      </div> <!--excel__table-->
-
-    </div> <!--excel-->
-
-  </div> <!--container-->
-  
-  <!------SVG-ICONS------>
-
-  <svg display="none">
-    <symbol id="exit" viewBox="0 0 304.74 304.73">
-      <g>
-        <path d="M347.64,550.84h33.85v67.55H618.43V381.59H381.54v67.57h-33.9v-1q0-33.22,0-66.43a33.62,33.62,0,0,1,25.91-33.06,35.39,35.39,0,0,1,8.34-.95q118.13-.07,236.26,0c15.84,0,29,10,33,25.15a34.6,34.6,0,0,1,1.15,8.82q.09,118.38,0,236.77a33.75,33.75,0,0,1-23.73,32.42,32.9,32.9,0,0,1-10.09,1.55q-118.54,0-237.07,0a33.74,33.74,0,0,1-33.36-28.3,33.37,33.37,0,0,1-.45-5.56q0-33.4,0-66.83Z" transform="translate(-347.63 -347.63)"/><path d="M347.67,517V483.12h163.5l-43.62-43.55,24-23.95L575.88,500l-84.4,84.4L467.7,560.59q21.69-21.66,43.47-43.41l-.1-.23Z" transform="translate(-347.63 -347.63)"/>
-      </g>
-    </symbol>
-  </svg>
-
-  <svg display="none">
-    <symbol id="delete" viewBox="0 0 297.87 384.01">
-      <g>
-        <path d="M372.09,393.21h256v5.24q0,125.74,0,251.48c0,22.7-19.32,42-42,42.05q-86,.06-172,0c-22.46,0-42-19.23-42-41.5q-.09-126.5,0-253ZM500.42,571.77l44.51,44.65,30.67-29.06L530,541.68l43.86-43.81-30-30.12L499.4,513.18l-43.57-45.31-30.66,30.58,44.58,44.47-44.89,45L455.21,617Z" transform="translate(-351.06 -307.99)"/><path d="M648.94,371.72H351.06V329.14h5.67c21.33,0,42.66-.08,64,.08a10.16,10.16,0,0,0,8.24-3.48q7.51-8,15.55-15.54a8.28,8.28,0,0,1,5.13-2.11q50.49-.19,101,0a8.24,8.24,0,0,1,5.11,2.15c5.46,5.14,10.51,10.71,16.07,15.72a12,12,0,0,0,7.23,3c21.33.24,42.66.14,64,.14h5.93Z" transform="translate(-351.06 -307.99)"/>
-      </g>
-    </symbol>
-  </svg>
-
-  <svg display="none">
-    <symbol id="text-left" viewBox="0 0 338.59 301.21">
-      <g>
-        <path d="M330.71,371.22V349.39H669.29v21.83Z" transform="translate(-330.71 -349.39)"/><path d="M669.29,461.32v21.87H330.85V461.32Z" transform="translate(-330.71 -349.39)"/><path d="M669.29,574.87v21.87H330.85V574.87Z" transform="translate(-330.71 -349.39)"/><path d="M583.6,515.09V537H330.84V515.09Z" transform="translate(-330.71 -349.39)"/><path d="M330.71,650.61V628.72H583.5v21.89Z" transform="translate(-330.71 -349.39)"/><path d="M583.62,403.45v21.83H330.81V403.45Z" transform="translate(-330.71 -349.39)"/>
-      </g>
-    </symbol>
-  </svg>
-
-  <svg display="none">
-    <symbol id="text-right" viewBox="0 0 338.59 301.21">
-      <g>
-        <path d="M669.29,628.78v21.83H330.71V628.78Z" transform="translate(-330.71 -349.39)"/><path d="M330.71,538.68V516.81H669.15v21.87Z" transform="translate(-330.71 -349.39)"/><path d="M330.71,425.13V403.26H669.15v21.87Z" transform="translate(-330.71 -349.39)"/><path d="M416.4,484.91V463H669.16v21.93Z" transform="translate(-330.71 -349.39)"/><path d="M669.29,349.39v21.89H416.5V349.39Z" transform="translate(-330.71 -349.39)"/><path d="M416.38,596.55V574.72H669.19v21.83Z" transform="translate(-330.71 -349.39)"/>
-      </g>
-    </symbol>
-  </svg>
-
-  <svg display="none">
-    <symbol id="text-center" viewBox="0 0 338.58 301.21">
-      <g>
-        <path d="M690.68,628.78v21.83H352.1V628.78Z" transform="translate(-352.1 -349.39)"/><path d="M352.17,538.68V516.81H690.6v21.87Z" transform="translate(-352.1 -349.39)"/><path d="M352.16,425.13V403.26H690.61v21.87Z" transform="translate(-352.1 -349.39)"/><path d="M395,484.91V463H647.77v21.93Z" transform="translate(-352.1 -349.39)"/><path d="M647.78,349.39v21.89H395V349.39Z" transform="translate(-352.1 -349.39)"/><path d="M395,596.55V574.72H647.79v21.83Z" transform="translate(-352.1 -349.39)"/>
-      </g>
-    </symbol>
-  </svg>
-
-  <svg display="none">
-    <symbol id="text-bold" viewBox="0 0 229.21 299.11">
-      <g>
-        <path d="M385.39,350.65h5c43.32,0,86.66-.57,130,.17,42.84.72,76.78,30.8,82.73,73.35,4.06,29.12-9.14,50.23-29.93,68.22-1.23,1.06-2.56,2-4.29,3.35,12.82,6.38,23.15,14.87,31.07,26.25,22,31.67,18.94,75.89-7.81,103.48-15.23,15.72-34,24-56.06,24-48.16.11-96.31,0-144.47,0h-6.25Zm64,245.05a17.63,17.63,0,0,0,3,.56c24,0,48,.33,72-.08,17.37-.29,31.31-14.39,31.59-30.87.31-18.44-13.34-32.75-31.9-32.91-23.83-.21-47.66-.06-71.49,0a22.21,22.21,0,0,0-3.2.45Zm-.11-127.87a12.09,12.09,0,0,0,1.8.4c20.82,0,41.64.2,62.45,0,9.51-.11,17.88-3.76,24-11.21,8.88-10.78,10.38-23.05,4.15-35.32C535.7,410,525.57,404.1,512,404.27c-19.15.24-38.3.06-57.45.06h-5.34Z" transform="translate(-385.39 -350.44)"/>
-      </g>
-    </symbol>
-  </svg>
-
-  <svg display="none">
-    <symbol id="text-italic" viewBox="0 0 276.18 340.97">
-      <g>
-        <path d="M377.71,627.75c13.16,0,25.79-.06,38.43,0,2.76,0,4.39-.46,5.51-3.46Q468.23,499.75,515,375.27c.28-.75.47-1.55.86-2.87h-42c.52-1.81.79-3.07,1.23-4.26,4.35-11.67,8.78-23.31,13-35,.92-2.53,2.1-3.62,5-3.62q70.85.15,141.7.08c.94,0,1.88.19,3.27.34-.5,1.73-.81,3.14-1.31,4.48-4.19,11.2-8.58,22.32-12.54,33.6-1.21,3.44-2.92,4.39-6.4,4.32-11.31-.22-22.62,0-33.93-.16-3-.05-4.3,1-5.34,3.74q-46.52,124.32-93.19,248.58c-.34.9-.51,1.86-.9,3.33h42.23c-3.32,8.84-6.39,17-9.45,25.24-1.69,4.51-3.52,9-5,13.54-.89,2.73-2.18,3.89-5.28,3.89q-70.84-.16-141.7-.09c-.81,0-1.63-.14-3.35-.3C367.22,655.87,372.4,642,377.71,627.75Z" transform="translate(-361.91 -329.51)"/>
-      </g>
-    </symbol>
-  </svg>
-
-  <svg display="none">
-    <symbol id="text-underline" viewBox="0 0 310.78 443.85">
-      <g>
-        <path d="M588.77,278.07h66.59v2q0,110.36-.05,220.71c0,19.87-3.24,39.24-11.66,57.44-12.74,27.55-33.56,47-60.9,59.58-15.91,7.34-32.79,11.23-50.11,13.4a268.45,268.45,0,0,1-56.46,1c-18-1.53-35.71-5-52.62-11.66a125.59,125.59,0,0,1-49.67-34.85,116.09,116.09,0,0,1-26.23-54.75,176.27,176.27,0,0,1-3.05-33.84q0-108.34,0-216.68v-2.29h66.56v2.74q0,96,.06,192c0,13.23.28,26.51,1.38,39.68,1.44,17.15,7.45,32.71,19.9,45,10.39,10.3,23.12,16.5,37.44,19.42s28.8,3.35,43.35,2.3c10.2-.74,20.23-2.39,29.79-6.13,23.81-9.33,37.82-26.92,43-51.71,2.48-11.88,2.6-24,2.61-36.08q.09-102.3.06-204.59Z" transform="translate(-344.61 -278.07)"/><path d="M655.28,677.75v44.18H344.74V677.75Z" transform="translate(-344.61 -278.07)"/>
-      </g>
-    </symbol>
-  </svg>
-
-  <!----SVG-ICONS-END----->
 </body>
 </html>

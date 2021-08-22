@@ -1,21 +1,18 @@
 @mixin button($color: green) {
-  display: inline-block;
-  padding: 3px;
-  min-height: 24px;
+  height: 24px;
   min-width: 24px;
+  padding: 3px;
+  text-align: center;
   position: relative;
+  display: inline-block;
+  color: rgba(0, 0, 0, .7);
 
-  & svg {
-    width: 18px;
-    height: 18px;
-
-    fill: rgba($color: #000000, $alpha: .7);
+  & i {
+    font-size: 18px;
   }
 
   &:active, &.active {
-    svg {
-      fill: $color;
-    }
+    color: $color;
   }
 
   &:hover {
@@ -23,6 +20,7 @@
     cursor: pointer;
   }
 }
+
 
 @mixin clear-list() {
   list-style: none;
