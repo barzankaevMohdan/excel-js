@@ -8,10 +8,9 @@ function toButton(button) {
       class="button ${button.active ? 'active' : ''}"
       ${meta}
     >
-      <i 
-        class="material-icons"
-        ${meta}
-      >${button.icon}</i>
+      <svg ${meta}>
+        <use ${meta} xlink:href="#text-${button.icon}"/>
+      </svg>
     </div>
   `
 }
@@ -20,22 +19,22 @@ export function createToolbar(s) {
   const buttons = [
     {
       value: {textAlign: 'left'},
-      icon: 'format_align_left',
+      icon: 'left',
       active: s['textAlign'] === 'left'
     },
     {
       value: {textAlign: 'center'},
-      icon: 'format_align_justify',
+      icon: 'center',
       active: s['textAlign'] === 'center'
     },
     {
       value: {textAlign: 'right'},
-      icon: 'format_align_right',
+      icon: 'right',
       active: s['textAlign'] === 'right'
     },
     {
       value: {fontWeight: s['fontWeight'] === 'bold' ? 'normal' : 'bold'},
-      icon: 'format_bold',
+      icon: 'bold',
       active: s['fontWeight'] === 'bold'
     },
     {
@@ -44,12 +43,12 @@ export function createToolbar(s) {
           ? 'none'
           : 'underline'
       },
-      icon: 'format_underlined',
+      icon: 'underline',
       active: s['textDecoration'] === 'underline'
     },
     {
       value: {fontStyle: s['fontStyle'] === 'italic' ? 'normal' : 'italic'},
-      icon: 'format_italic',
+      icon: 'italic',
       active: s['fontStyle'] === 'italic'
     }
   ]

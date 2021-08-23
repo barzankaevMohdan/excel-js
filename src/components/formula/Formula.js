@@ -15,8 +15,8 @@ export class Formula extends ExcelComponent {
 
   toHTML() {
     return `
-      <div class="info">fx</div>
-      <div id="formula" class="input" contenteditable spellcheck="false"></div>
+      <div class="excel__formula-info">fx</div>
+      <div id="formula" class="excel__formula-input" contenteditable spellcheck="false"></div>
     `
   }
 
@@ -26,7 +26,7 @@ export class Formula extends ExcelComponent {
     this.$formula = this.$root.find('#formula')
 
     this.$on('table:select', $cell => {
-      this.$formula.text($cell.text())
+      this.$formula.text($cell.data.value)
     })
   }
 
