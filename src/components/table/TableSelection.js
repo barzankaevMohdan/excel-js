@@ -6,7 +6,6 @@ export class TableSelection {
     this.current = null
   }
 
-  // $el instaceof DOM
   select($el) {
     this.clear()
     $el.focus().addClass(TableSelection.className)
@@ -15,8 +14,12 @@ export class TableSelection {
   }
 
   clear() {
-    this.group.forEach($c => $c.removeClass(TableSelection.className))
+    this.group.forEach($el => $el.removeClass(TableSelection.className))
     this.group = []
+  }
+
+  get selectedIds() {
+    return this.group.map($el => $el.id())
   }
 
   selectGroup($group = []) {
@@ -24,5 +27,9 @@ export class TableSelection {
 
     this.group = $group
     this.group.forEach($el => $el.addClass(TableSelection.className))
+  }
+
+  applyStyle(style) {
+    this.group.forEach($el => $el.css(style))
   }
 }
