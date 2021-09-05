@@ -12,6 +12,27 @@ body {
   font-size: 12px;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  box-shadow: 0 0 1px rgba(60, 64, 67, .15) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 5px;
+  background: #7c7c7c;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(60, 64, 67, .8);
+}
+
 @import "./blocks/excel";
 @import "./blocks/header";
 @import "./blocks/toolbar";

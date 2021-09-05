@@ -5,12 +5,14 @@
   display: flex;
   align-items: center;
   height: $formula-height;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: $header-height + $toolbar-height;
 
+  background: #fff;
   border-bottom: 1px solid $border-color;
+  z-index: 10000;
 }
 
 .excel__formula-info {
