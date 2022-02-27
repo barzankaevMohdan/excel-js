@@ -1,5 +1,4 @@
 # excel-js
-Implementation of part of Excel functionality in pure JS
 
 // npm run install
 // npm run start 
