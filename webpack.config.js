@@ -33,7 +33,7 @@ module.exports = {
   entry: ['@babel/polyfill', './index.js'],
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'public')
   },
   resolve: {
     extensions: ['.js'],
@@ -44,7 +44,7 @@ module.exports = {
   },
   devtool: isDev ? 'source-map' : false,
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'public'),
     compress: true,
     port: process.env.PORT || 8080,
     hot: isDev,
@@ -64,7 +64,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: path.resolve(__dirname, 'src/favicon.ico'), to: path.resolve(__dirname, 'dist') }
+        { from: path.resolve(__dirname, 'src/favicon.ico'), to: path.resolve(__dirname, 'public') }
       ],
     }),
     new MiniCssExtractPlugin({
